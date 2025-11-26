@@ -842,16 +842,13 @@
   transform-style: preserve-3d;
   will-change: transform;
 }
-
-.tilt-card:hover {
-  box-shadow: 0 18px 30px rgba(0,0,0,0.12);
-}/* === DIVIDER FULL CSS WEDDING ELEGANT === */
+/* === DIVIDER WEDDING ELEGAN TANPA TEKS === */
 .divider-elegant {
-  width: 100%;
-  margin: 28px 0 18px;
+  margin: 28px 0 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .divider-elegant::before,
@@ -860,91 +857,18 @@
   flex: 1;
   height: 1px;
   background: linear-gradient(to right, transparent, #c7a08a);
-}
-
-.divider-elegant::after {
-  background: linear-gradient(to left, transparent, #c7a08a);
-}
-
-.divider-elegant::before,
-.divider-elegant::after {
-  margin: 0 10px;
-}
-
-.divider-elegant::after,
-.divider-elegant::before {
   border-radius: 999px;
 }
 
-.divider-elegant::after,
-.divider-elegant::before {}
-
-.divider-elegant::before {
-  margin-right: 12px;
-}
-
-.divider-elegant::after {
-  margin-left: 12px;
-}
-
-.divider-elegant::before,
-.divider-elegant::after {
-  position: relative;
-}
-
-.divider-elegant::before {
-  position: relative;
-}
-
-.divider-elegant::before {
-  border: none;
-}
-
-.divider-elegant::after {
-}
-
-.divider-elegant::before {
-}
-
-.divider-elegant::after {
-}
-
-.divider-elegant::before,
-.divider-elegant::after {}
-
-.divider-elegant::after,
-.divider-elegant::before {}
-
-.divider-elegant::after,
-.divider-elegant::before {}
-
-.divider-elegant::after,
-.divider-elegant::before {}
-
-.divider-elegant::after,
-.divider-elegant::before {}
-
-.divider-elegant::before,
-.divider-elegant::after {}
-
-.divider-elegant::before,
-.divider-elegant::after {}
-
-.divider-elegant::before,
-.divider-elegant::after {}
-
-.divider-elegant::before,
-.divider-elegant::after {}
-
 /* titik kecil di tengah */
-.divider-elegant:after {
-  content: "";
+.divider-elegant span {
   width: 10px;
   height: 10px;
+  border-radius: 999px;
   border: 2px solid #c7a08a;
-  border-radius: 50%;
   background: #fff7f0;
 }
+
 
 
   </style>
@@ -1307,42 +1231,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONI -->
-    <section id="testimoni">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Testimoni</h2>
-            <p class="section-subtitle">Contoh testimoni dari klien (dummy).</p>
-          </div>
-        </div>
-
-        <div class="testi-row">
-          <div class="testi-card">
-            <div class="testi-name">Rina &amp; Fajar</div>
-            <div class="testi-meta">Akad &amp; resepsi, Jakarta</div>
-            <p>
-              "Tampilan katalog seperti ini memudahkan kami memilih dekorasi dan paket tanpa bingung."
-            </p>
-          </div>
-          <div class="testi-card">
-            <div class="testi-name">Dewi &amp; Arif</div>
-            <div class="testi-meta">Garden party, Bogor</div>
-            <p>
-              "Struktur informasinya jelas, sehingga proses konsultasi lebih terarah."
-            </p>
-          </div>
-          <div class="testi-card">
-            <div class="testi-name">Siti &amp; Adi</div>
-            <div class="testi-meta">Pernikahan adat, Bandung</div>
-            <p>
-              "Katalog ini bisa jadi referensi UI/UX untuk website wedding organizer profesional."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+   
     <!-- TENTANG KAMI -->
     <section id="tentang">
       <div class="container">
@@ -1353,57 +1242,14 @@
         </div>
         <div class="about-card">
           <p>
-            Halaman ini dirancang sebagai contoh <strong>website katalog wedding</strong>
-            dengan pendekatan desain modern dan fokus tampilan mobile.
+            Halaman ini dirancang sebagai <strong>website katalog wedding</strong>
+            dengan pendekatan desain modern.
           </p>
           <p style="margin-top:6px;">
             Struktur konten meliputi banner profesional, kategori utama, galeri visual,
             paket layanan, hingga informasi kontak. Seluruh data harga dan transaksi
             sengaja tidak dicantumkan karena digunakan untuk <strong>latihan/tugas praktik</strong>.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">FAQ (Simulasi)</h2>
-            <p class="section-subtitle">Pertanyaan yang sering diajukan (contoh).</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Apakah paket bisa dicustom sesuai kebutuhan?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            Ya, pada implementasi nyata paket dapat disesuaikan dengan prioritas klien:
-            dekorasi, dokumentasi, catering, atau layanan lainnya.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Bagaimana cara menampilkan detail harga?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            Untuk keperluan tugas, bagian harga bisa ditambahkan sebagai teks atau tabel
-            terpisah, atau cukup berupa keterangan "harga by request" agar tetap rapi.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Apakah desain ini bisa dikembangkan lagi?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            Sangat bisa. Kamu dapat menambahkan halaman detail tiap kategori, form
-            pemesanan, atau integrasi dengan WhatsApp dan email.
-          </div>
         </div>
       </div>
     </section>
@@ -1431,26 +1277,24 @@
             <div class="contact-label">Alamat</div>
             <span>Jaten, Klego, Boyolali jawa tengah</span>
           </div>
-          <div class="contact-row">
-            <div class="contact-label">Jam Operasional</div>
-            <span>Senin - Sabtu, 07.00 - 19.00 WIB</span>
-          </div>
 
           <div class="contact-actions">
-            <button class="btn-outline">Contact WhatsApp</button>
+  <a href="https://wa.me/6285727574271" target="_blank" class="btn-outline">
+    💬 Contact WhatsApp
+  </a>
+</div>
 
-          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- FLOATING CTA -->
-  <div class="floating-cta">
-    <button class="floating-btn">
-      <span>💬</span> Contact WhatsApp
-    </button>
-  </div>
+<div class="floating-cta">
+  <a href="https://wa.me/6285727574271" target="_blank" class="floating-btn">
+    <span>💬</span> Contact WhatsApp
+  </a>
+</div>
 
   <!-- FOOTER -->
   <footer>
