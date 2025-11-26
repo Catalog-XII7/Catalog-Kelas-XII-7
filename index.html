@@ -809,6 +809,43 @@
   from {opacity:0; transform:translateY(14px);}
   to {opacity:1; transform:translateY(0);}
 }
+@media (max-width: 768px) {
+  .grid-card:active,
+  .category-card:active,
+  .gallery-card:active {
+    transform: scale(0.94);
+    transition: transform .1s ease;
+  }
+}
+/* === KLIK / TAP FEEDBACK UNTUK SEMUA PERANGKAT === */
+.grid-card:active,
+.category-card:active,
+.gallery-card:active,
+.gallery-image:active {
+  transform: scale(0.94);
+  transition: transform .12s ease;
+}
+
+/* === HOVER KHUSUS DESKTOP === */
+@media (min-width: 769px) {
+  .grid-card:hover,
+  .category-card:hover,
+  .gallery-card:hover,
+  .gallery-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+}
+/* === 3D TILT CARD EFFECT === */
+.tilt-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 18px 30px rgba(0,0,0,0.12);
+}
 
   </style>
 </head>
@@ -1400,6 +1437,31 @@
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+    <script>
+/* ===== TAMBAHKAN KELAS TILT KE SEMUA CARD ===== */
+document.querySelectorAll(".grid-card, .category-card, .gallery-card").forEach(el=>{
+  el.classList.add("tilt-card");
+});
+
+/* ===== EFEK 3D TILT ===== */
+document.querySelectorAll(".tilt-card").forEach(card=>{
+  card.addEventListener("mousemove", e=>{
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * 6;
+    const rotateY = ((x - centerX) / centerX) * 6;
+    card.style.transform = `rotateX(${ -rotateX }deg) rotateY(${ rotateY }deg) scale(1.04)`;
+  });
+
+  card.addEventListener("mouseleave", ()=>{
+    card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+  });
+});
+</script>
+
   </script>
   <!-- ===== MODAL PRODUK (TAMBAHAN) ===== -->
 <div class="modal-bg" id="modalDetail" onclick="closeDetail()">
